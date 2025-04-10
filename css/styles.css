@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.header {
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  height: 100vh; /* altura total da viewport */
+  padding: 0 !important; /* remove padding extra do Bootstrap */
+  margin: 0 !important; /* remove margem extra */
+}
+
+.image-container img {
+  width: 100%; /* largura completa do container */
+  height: 100%; /* altura completa do container */
+  object-fit: cover; /* mantém proporção, recortando excesso */
+  object-position: center; /* centraliza a imagem */
+}
+
+.hero-img {
+  overflow-y: hidden;
+}
+
+.background-cover {
+  background: url(../assets/images/background_pontilhadao_hero.png) center center no-repeat;
+  background-size: cover;
+}
+
+.imagem-logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.hero {
+  height: 85vh;
+}
+
+.btn-hero {
+  width: 30rem;
+}
+
+.hero-left-col {
+  height: 85vh;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.img-hero-mobile {
+  overflow: hidden;
+}
+
+@media (max-width: 1250px) {
+  .btn-hero {
+    justify-self: center;
+    width: 25rem;
+  }
+}
+@media (max-width: 1000px) {
+  .btn-hero {
+    justify-self: center;
+    width: 20rem;
+  }
+}
+@media (max-width: 572px) {
+  .btn-hero {
+    justify-self: center;
+    width: 15rem;
+  }
+  .background-cover {
+    background: url(../assets/images/background_sm_pontilhadao_hero.png) center center no-repeat;
+    background-size: cover;
+  }
+  .header {
+    height: 90vh;
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .btn-hero {
+    justify-self: center;
+    width: 10rem;
+  }
+}
